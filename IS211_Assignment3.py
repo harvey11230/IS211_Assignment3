@@ -16,19 +16,19 @@ def image_hits(self):
 
     #created counters for each cateogry and used regular expression to find each category from records.
     for i in self:
-        if re.search(r".css$|.CSS$", i):
+        if re.search(r"\.css$|\.CSS$", i):
             css_counter +=1
-        elif re.search(r".png$|.PNG$", i):
+        elif re.search(r"\.png$|\.PNG$", i):
             png_counter +=1
-        elif re.search(r".gif$|.GIF$", i):
+        elif re.search(r"\.gif$|\.GIF$", i):
             gif_counter +=1
-        elif re.search(r".jpg$|.JPG$", i):
+        elif re.search(r"\.jpg$|\.JPG$", i):
             jpg_counter +=1
-        elif re.search(r".jpeg$|.JPEG$", i):
+        elif re.search(r"\.jpeg$|\.JPEG$", i):
             jpeg_counter +=1
-        elif re.search(r".png$|.PNG$", i):
+        elif re.search(r"\.png$|\.PNG$", i):
             png_counter +=1
-        elif re.search(r".html$|.HTML$", i):
+        elif re.search(r"\.html$|\.HTML$", i):
             html_counter +=1
 
     total_request = css_counter+png_counter+gif_counter+jpg_counter+jpeg_counter+png_counter+html_counter
@@ -208,6 +208,8 @@ if __name__ == '__main__':
     parser.add_argument("--url", help="URL to the datafile", type=str, required=True)
     args = parser.parse_args()
     downloadData(args.url)
+
+
 
 
 
