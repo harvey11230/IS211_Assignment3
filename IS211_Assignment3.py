@@ -26,17 +26,14 @@ def image_hits(self):
             jpg_counter +=1
         elif re.search(r"\.jpeg$|\.JPEG$", i):
             jpeg_counter +=1
-        elif re.search(r"\.png$|\.PNG$", i):
-            png_counter +=1
         elif re.search(r"\.html$|\.HTML$", i):
             html_counter +=1
 
-    total_request = css_counter+png_counter+gif_counter+jpg_counter+jpeg_counter+png_counter+html_counter
-    image_request = (css_counter+png_counter+gif_counter+jpg_counter+jpeg_counter+png_counter)/total_request*100
-    total_hits = css_counter+png_counter+gif_counter+jpg_counter+jpeg_counter+png_counter
+    total_request = css_counter+png_counter+gif_counter+jpg_counter+jpeg_counter+html_counter
+    image_request = (png_counter+gif_counter+jpg_counter+jpeg_counter)/total_request*100
+    total_hits = png_counter+gif_counter+jpg_counter+jpeg_counter+png_counter
     print("="*100)
     print("Image requests account for " + str(round(image_request)) + "% and " + str(total_hits) + " hits of all requests.")
-    print("css request account for " + str(round(css_counter/total_request*100)) + "% and " + str(css_counter) + " hits of all requests.")
     print("png request account for " + str(round(png_counter / total_request * 100)) + "% and " + str(png_counter) + " hits of all requests.")
     print("gif request account for " + str(round(gif_counter / total_request * 100)) + "% and " + str(gif_counter) + " hits of all requests.")
     print("jpg request account for " + str(round(jpg_counter/ total_request * 100)) + "% and " + str(jpg_counter) + " hits of all requests.")
