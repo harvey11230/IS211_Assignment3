@@ -31,7 +31,7 @@ def image_hits(self):
 
     total_request = css_counter+png_counter+gif_counter+jpg_counter+jpeg_counter+html_counter
     image_request = (png_counter+gif_counter+jpg_counter+jpeg_counter)/total_request*100
-    total_hits = png_counter+gif_counter+jpg_counter+jpeg_counter+png_counter
+    total_hits = png_counter+gif_counter+jpg_counter+jpeg_counter
     print("="*100)
     print("Image requests account for " + str(round(image_request)) + "% and " + str(total_hits) + " hits of all requests.")
     print("png request account for " + str(round(png_counter / total_request * 100)) + "% and " + str(png_counter) + " hits of all requests.")
